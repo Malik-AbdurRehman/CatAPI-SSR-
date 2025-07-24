@@ -31,7 +31,7 @@ export default function Home({initialCats}) {
           </div>
         ))}
         </div>
-      <button onClick={loadMore} className="flex justify-center mx-auto p-4 rounded-2xl border-none bg-gray-800 text-white">{loading ? "Loading" : "Load More"}</button>
+      <button onClick={loadMore} className="flex justify-center mx-auto p-4 rounded-2xl border-none bg-gray-800 text-white m-10">{loading ? "Loading" : "Load More"}</button>
     </div>
   );
 }
@@ -39,7 +39,6 @@ export default function Home({initialCats}) {
 export async function getServerSideProps() {
   const res = await fetch("https://api.thecatapi.com/v1/images/search?limit=9");
   const data = await res.json();
-  console.log("Hello")
   return{
     props: {
       initialCats:data,
