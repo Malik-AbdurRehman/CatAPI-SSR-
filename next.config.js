@@ -4,4 +4,8 @@ const nextConfig = {
   swcMinify: true,
 }
 
-module.exports = nextConfig
+module.exports = {
+  images: {
+    domains: ["cdn2.thecatapi.com", "cdn.thecatapi.com", "cdn1.theimageapi.com"],
+  },
+}
